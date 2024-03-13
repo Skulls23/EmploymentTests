@@ -160,7 +160,7 @@ const main = () => {
             }
         }        
 
-        return `${person.name}, ${person.age} ans, il doit un repas à ${names}`;
+        return `${person.name}, ${person.age} ans, il doit un repas à ${names}.`;
     }
 
     const string = ToString(data[9]);
