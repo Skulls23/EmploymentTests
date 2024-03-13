@@ -31,14 +31,14 @@ const data = [
 ]
 
 /** Etant donné que je suis un peu rouillé en JS, je suis obligé de regarder sur internet, je m'en sort bien en algorithme mais j'ai pas fait de JS depuis des années.
- *  Je suis parfaitement capable de reussir cette exercice mais il me faut quand meme les mots clés.
- *  Ca ne veut pas dire que j'ai utilisé GPT, GPT c'est cool pour expliquer un concept, mais vu qu'on n'a pas le droit de l'utiliser, j'ai utilisé l'ancienne méthode.
+ *  Je suis parfaitement capable de reussir cette exercice mais il me faut quand même les mots clés.
+ *  Ça ne veut pas dire que j'ai utilisé GPT, GPT c'est cool pour expliquer un concept, mais vu qu'on n'a pas le droit de l'utiliser, j'ai utilisé l'ancienne méthode.
  *  StackOverflow et autres forums/sites d'apprentissage pour comprendre comment marche le sorting en JS par exemple et après je me sers de ce que j'ai appris pour finir l'exercice.
- *  En effet, c'est un peu plus lent, MAIS, au moins, je comprend ce que je fais et je copie pas betement le code sur le fichier.
- *  Ceci étant dit, j'espere que vous comprendrez que internet reste un outil majeur du developpeur, et ce depuis des decennies.
- *  J'espere que vous ne me tiendrez pas rigueur d'aller un petit peu sur internet pour me rappeler de mes cours =) .
+ *  En effet, c'est un peu plus lent, MAIS, au moins, je comprends ce que je fais et je ne copie pas bêtement le code sur le fichier.
+ *  Ceci étant dit, j'espère que vous comprendrez qu’internet reste un outil majeur du développeur, et ce depuis des décennies.
+ *  J'espère que vous ne me tiendrez pas rigueur d'aller un petit peu sur internet pour me rappeler de mes cours =) .
  * 
- *  PS: Je nomme mes variables et méthode en anglais par habitude de travailler avec des anglophones, je peux changer cette habitude évidemment.
+ *  PS: Je nomme mes variables et méthodes en anglais par habitude de travailler avec des anglophones, je peux changer cette habitude évidemment.
 */
 
 
@@ -53,11 +53,11 @@ const main = () => {
 
 
 
-    // Exercice 2 : Liste des prénoms des utilisateus triés par age descendant
+    // Exercice 2 : Liste des prénoms des utilisateurs triés par âge descendant
 
 
 
-    //Fonction a utiliser dans un sort() afin de definir un tri personnalisé
+    //Fonction a utiliser dans un sort() afin de définir un tri personnalisé
     function SortByAge(a, b)
     {
         const ageA = a.age;
@@ -72,7 +72,7 @@ const main = () => {
     }
 
 
-    tempNameAgeArray = Array.from(data); //variable temporaire
+    tempNameAgeArray = Array.from(data); //Variable temporaire
     tempNameAgeArray.sort(SortByAge);
 
     const nameArrayAgeSorted = [tempNameAgeArray.map(tempNameAgeArray => tempNameAgeArray.name)]
@@ -121,21 +121,21 @@ const main = () => {
         return position;
     }
 
-    let tempPersonDebtArray = new Array(data.length).fill(0); //chaque case de ce tableau equivaut a un id
+    let tempPersonDebtArray = new Array(data.length).fill(0); //Chaque case de ce tableau equivaut a un id
     for(i = 0; i < data.length; i++)
     {
-        for(j = 0; j < data[i].dept.length; j++) //on parcours chaque personne a qui l'on doit un repas
+        for(j = 0; j < data[i].dept.length; j++) //On parcourt chaque personne a qui l'on doit un repas
         {
-            tempPersonDebtArray[data[i].dept[j]]++; //on incrémente chaque case liée a l'id de la personne a qui l'on doit un repas
+            tempPersonDebtArray[data[i].dept[j]]++; //On incrémente chaque case liée a l'id de la personne a qui l'on doit un repas
         }
     }
 
-    const personWithMostOwedMeal = data[GetBiggestNumberPosition(tempPersonDebtArray)]; //On récupere la ligne lié a la case de tempPersonDebtArray avec le plus haut nombre
+    const personWithMostOwedMeal = data[GetBiggestNumberPosition(tempPersonDebtArray)]; //On récupère la ligne liée à la case de tempPersonDebtArray avec le plus haut nombre
     console.log(personWithMostOwedMeal); //Vérification via log
 
     
 
-    // Exercice 5 : Une fonction qui prend en parametre une personne et renvoie une chaine de caracteres comme celle-ci :
+    // Exercice 5 : Une fonction qui prend en paramètre une personne et renvoie une chaine de caractères comme celle-ci :
     //      - "Nathan, 56 ans, il doit un repas à Emma et Julien."
 
 
@@ -151,7 +151,7 @@ const main = () => {
             //Boucle pour stocker les noms des personnes a qui l'on est endettés
             for(i = 0; i < person.dept.length; i++)
             {
-                if(typeof names !== 'undefined') //si la variable est défini c'est qu'on peut rajouter "et"
+                if(typeof names !== 'undefined') //Si la variable est définie c'est qu'on peut rajouter "et"
                     names += " et "
                 else
                     names = ""
